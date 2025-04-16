@@ -14,7 +14,7 @@ const camadasAtivas = {};
 const cores = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"];
 
 // 🔁 Carrega lista de camadas da API
-fetch("http://127.0.0.1:5000/camadas")
+fetch("http://https://webgis-backend.onrender.com/camadas")
   .then(res => res.json())
   .then(camadas => {
     camadas.forEach((nome, i) => {
