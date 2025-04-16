@@ -26,6 +26,7 @@ print("🔌 Banco conectado:", cur.fetchone()["current_database"])
 @app.route("/camadas", methods=["GET"])
 def listar_camadas_disponiveis():
     try:
+        conn.rollback()  # 🔄 força reset da transação, evita erro "current transaction aborted"
         cur.execute("""
             SELECT table_name
             FROM information_schema.columns
@@ -36,6 +37,7 @@ def listar_camadas_disponiveis():
         return jsonify(tabelas)
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
+
 
 # ✅ Teste de status
 @app.route("/")
