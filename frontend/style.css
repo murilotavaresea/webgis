@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+  }
+  
+  #map {
+    width: 100%;
+    height: calc(100vh - 50px);
+  }
+  
+  /* Botão de esconder/mostrar a sidebar */
+  #toggle-sidebar {
+    position: absolute;
+    top: 15px;
+    left: 310px;
+    z-index: 1100;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease;
+  }
+  
+  /* Quando a sidebar está escondida */
+  .sidebar-hidden #sidebar {
+    display: none;
+  }
+  
+  .sidebar-hidden #toggle-sidebar {
+    left: 15px;
+  }
+  
+  
+  
