@@ -23,6 +23,7 @@ fetch("https://webgis-backend.onrender.com/camadas")
     });
   });
 
+
 // ✅ Cria checkbox para cada camada
 function criarCheckbox(nome, cor) {
   const painel = document.getElementById("painel-camadas");
@@ -63,6 +64,7 @@ function carregarCamada(nome, cor) {
       adicionarAoGerenciador(nome);
     });
 }
+
 
 // 🔁 Liga/desliga camada
 function alternarCamada(nome, visivel) {
